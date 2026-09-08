@@ -9,10 +9,10 @@ export const VIAGENS = [
     saida: '05:30',
     chegada: '09:45',
     motorista: 'Seu Raimundo',
-    veiculo: 'Van — placa NRA-4B21',
+    veiculo: 'Carro — placa NRA-4B21',
     preco: 65,
-    vagasTotais: 15,
-    assentosOcupados: ['A2', 'A3', 'B1', 'C2', 'C3', 'D1', 'E2'],
+    vagasTotais: 4,
+    assentosOcupados: ['B1'],
   },
   {
     id: 'v2',
@@ -21,10 +21,10 @@ export const VIAGENS = [
     saida: '13:00',
     chegada: '17:15',
     motorista: 'Dona Célia',
-    veiculo: 'Van — placa QSD-9912',
+    veiculo: 'Carro — placa QSD-9912',
     preco: 65,
-    vagasTotais: 15,
-    assentosOcupados: ['A1', 'A2', 'A3', 'B2', 'B3', 'C1', 'C2', 'C3', 'D3', 'E1', 'E2'],
+    vagasTotais: 4,
+    assentosOcupados: ['F', 'B1', 'B3'],
   },
   {
     id: 'v3',
@@ -33,19 +33,18 @@ export const VIAGENS = [
     saida: '18:30',
     chegada: '22:45',
     motorista: 'Seu Raimundo',
-    veiculo: 'Van — placa NRA-4B21',
+    veiculo: 'Carro — placa NRA-4B21',
     preco: 65,
-    vagasTotais: 15,
-    assentosOcupados: ['A2', 'B1', 'B2', 'B3'],
+    vagasTotais: 4,
+    assentosOcupados: [],
   },
 ]
 
-// Layout físico da van: 5 fileiras, configuração 1 + 2 (corredor no meio),
-// última fileira é banco corrido de 3.
-export const FILEIRAS = [
-  { id: 'A', assentos: ['A1', null, 'A2', 'A3'] },
-  { id: 'B', assentos: ['B1', null, 'B2', 'B3'] },
-  { id: 'C', assentos: ['C1', null, 'C2', 'C3'] },
-  { id: 'D', assentos: ['D1', null, 'D2', 'D3'] },
-  { id: 'E', assentos: ['E1', 'E2', 'E3', null] },
+// Layout físico do carro: motorista + banco da frente (1 passageiro) +
+// banco de trás (3 passageiros).
+export const ASSENTOS_CARRO = [
+  { codigo: 'F', label: 'Frente' },
+  { codigo: 'B1', label: 'Trás · janela esq.' },
+  { codigo: 'B2', label: 'Trás · meio' },
+  { codigo: 'B3', label: 'Trás · janela dir.' },
 ]
