@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import RotaHero from '../components/RotaHero.jsx'
 
 const TABS = [
@@ -17,6 +18,7 @@ function formatarTelefone(valor) {
 }
 
 export default function AcessoPage() {
+  const navegar = useNavigate()
   const [aba, setAba] = useState('entrar')
   const [etapa, setEtapa] = useState('telefone') // 'telefone' | 'codigo'
   const [nome, setNome] = useState('')
@@ -86,7 +88,7 @@ export default function AcessoPage() {
     await new Promise((resolve) => setTimeout(resolve, 700))
 
     setEnviando(false)
-    // TODO: redirecionar para a área do passageiro autenticado
+    navegar('/viagens')
   }
 
   return (
